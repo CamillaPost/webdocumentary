@@ -1,0 +1,482 @@
+/*CSS document*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+/*navigationsbar*/
+
+header {
+    background: #7e7e36;
+    width: 100%;
+    padding: 0 20px;
+}
+
+#logo-burger {
+    display: flex;
+    align-items: center;
+    margin-left: .5em;
+}
+
+#logo img {
+    width: 80%;
+    margin: 5%;
+}
+
+#logo,
+#main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#main-nav {
+    display: flex;
+    margin-right: .5em;
+    list-style: none;
+}
+
+#main-nav a {
+    display: block;
+    margin-left: 1em;
+    font-size: 1.3em;
+    line-height: 1.4em;
+}
+
+#main-nav a:hover {
+    color: #bec4a7;
+}
+
+.active {
+    color: #bec4a7;
+}
+
+.hidden {
+    display: none;
+}
+
+label {
+    color: #ffffff;
+}
+
+/*forside*/
+
+body img{
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+
+h1{
+   padding: 0% 10% 5% 10%;
+    font-family: 'Patua One', cursive;
+    font-size: 26px;
+}
+
+p{
+    padding: 0% 10% 5% 10%;
+    font-size: 14px;
+}
+
+#book{
+    background-color: #bec4a7;
+    margin: 5% 10% 0% 10%;
+    padding-top: 5%;
+    padding-bottom: 18%;
+}
+
+#cirkel{
+    background-color: #363b44;
+    height: 180px;
+    width: 180px;
+    border-radius: 90px;
+    margin-left: 45%;
+    margin-top: -20%;
+}
+
+#cirkel p{
+    text-align: center;
+    padding-top: 25%;
+    color: darkgrey;
+}
+
+span{
+    font-size: 16px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+/*footer*/
+
+footer{
+    background-color: #7e7e36;
+    margin-top: 5%;
+    padding-top: 5%;
+    text-align: center;
+}
+
+/*Destinationer*/
+#speciel{
+    margin-top: 5%;
+}
+
+/*rejse*/
+h2{
+    font-size: 20px;
+    padding: 0% 10% 5% 10%;
+    font-weight: 100;
+    font-family: 'Patua One', cursive;
+}
+
+h3{
+    font-size: 18px;
+    padding: 0% 10% 5% 10%;
+    font-weight: 100;
+    font-family: 'Patua One', cursive;
+}
+
+#rejseguide{
+    color: #7e7e36;
+}
+
+#anderledes{
+    font-size: 16px;
+    font-weight: 900;
+}
+
+#mereinfo{
+    background-color: #bec4a7;
+    width: 85%;
+    margin: 0 auto;
+}
+
+#mereinfo p{
+    padding: 2% 5%;
+    font-size: 12px;
+    text-align: center;
+}
+
+/*MEDIA QUERY MOBILE */
+
+@media all and (max-width: 599px) {
+
+    /*HEADER NAV*/
+    header {
+        display: block;
+    }
+
+    #logo-burger {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo-burger label {
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+    }
+
+    #toggle:checked + #main-nav {
+        display: block;
+    }
+
+    #main-nav {
+        display: none;
+    }
+
+    #main-nav li {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    #main-nav a {
+        margin: 0;
+    }
+
+    #main-nav li:last-of-type {
+        border-bottom: none;
+    }
+    
+    #tabletbillede, #tabletbillede1{
+        display: none;
+    }
+}
+
+/*MEDIA QUERY TABLET AND ABOVE*/
+
+@media all and (min-width: 600px) {
+
+    /*HEADER NAV*/
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #logo-burger {
+        margin: 0;
+    }
+
+    #logo {
+        margin-top: .3em;
+    }
+
+    #main-nav {
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+    }
+
+    #main-nav a {
+        margin: 0 .5em;
+        margin-top: 20px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    label {
+        display: none;
+    }
+    
+    #mobilbillede{
+        display: none;
+    }
+    
+    #cover{
+        width: 100%;
+    }
+    
+    h1{
+      padding: 0% 0% 5% 0%;
+        font-size: 30px;
+    }
+    
+    p{
+        font-size: 14px;
+        padding: 0% 0% 5% 0%;
+    }
+    
+    h2, h3{
+        padding: 0% 0% 5% 0%;
+    }
+    
+    /*forside*/
+    section#familierejser{grid-area: fr;}
+    img#tabletbillede{grid-area: tb;}
+    img#tabletbillede1{grid-area: tb1;}
+    
+    #gridops{
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas: 
+            'fr tb tb'
+            'fr tb1 tb1';
+        grid-gap: 30px;
+    }
+    
+    #tabletbillede1{
+        margin-top: -10%;
+    }
+    
+    #book p, #book h1{
+        padding:1% 5%;
+    }
+    
+    #book{
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 10%;
+    }
+    
+    #cirkel{
+       height: 200px;
+        width: 200px;
+        border-radius: 100px;
+        margin-left: 62%;
+        margin-top: -10%; 
+    }
+    
+    /*footer*/
+    p#info{grid-area: info;}
+    p#lokation{grid-area: loka;}
+    
+    footer{
+        display: grid;
+        grid-template-areas: 
+            'info loka';
+    }
+    
+    /*destinationer*/
+    #desti{
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .destbil{
+        margin-bottom: 0;
+    }
+    
+    #kamel{
+        display: none;
+    }
+    
+    img#vietnambillede{grid-area: vb;}
+    section#vietnam{grid-area: viet;}
+    img#sribillede{grid-area: sb;}
+    section#sri{grid-area: sri;}
+    img#marokkobillede{grid-area: mb;}
+    section#marokko{grid-area: marok;}
+    section#jordan{grid-area: jo;}
+    
+    #desti{
+        margin-top: 5%;
+        display: grid;
+        grid-template-areas: 
+            'viet sb sb'
+            'viet sb sb'
+            'viet sri sri'
+            'vb sri sri'
+            'mb mb jo'
+            'mb mb jo'
+            'marok marok jo'
+            'marok marok jo';
+    }
+    
+    #vietnam{
+        background-color: #bec4a7;
+    }
+    
+    #sri{
+        background-color: #7e7e36; 
+    }
+    
+    #jordan{
+        background-color: #d7c3b8;
+    }
+    
+    #marokko{
+        background-color: #dcdcdc;
+    }
+    
+    #desti section{
+        padding: 10%;
+    }
+    
+    /*Rejser*/
+    #vietnamm{
+        display: none;
+    }
+    
+    section#rejseguide{grid-area: rg;}
+    section#dagsprogram{grid-area: dp;}
+    section#inkluderet{grid-area: inklu;}
+    
+    #container{
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas: 
+            'rg dp'
+            'rg inklu';
+        grid-gap: 30px;
+    }
+    
+    #mereinfo{
+        width: 90%;
+    }
+}
+
+@media all and (min-width: 870px){
+    /*forside*/
+    #tabletbillede1{
+        display: none;
+    }
+    
+    section#familierejser{grid-area: fr;}
+    img#tabletbillede{grid-area: tb;}
+    
+    #gridops{
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas: 
+            'fr tb tb';
+        grid-gap: 30px;
+    }
+    
+      #cirkel{
+       margin-left: 72%;
+        margin-top: -11%; 
+    }
+    
+}
+
+/*MEDIA QUERY LAPTOP AND ABOVE*/
+
+@media all and (min-width: 1024px) {
+
+    /*HEADER*/
+    header {
+        flex-direction: row;
+    }
+    
+    h1{
+        font-size: 32px;
+    }
+    
+    p{
+        font-size: 16px;
+    }
+    
+    #book{
+        width: 85%;
+    }
+    
+    #bookingboks{
+        width: 64%;
+    }
+    
+    img#tabletbillede{grid-area: tb;}
+    div#para1{grid-area: para1;}
+    div#para2{grid-area: para2;}
+    
+    /*Destination*/
+    
+    #desti{
+        width: 85%;
+        display: grid;
+        grid-template-areas: 
+            'viet sb sb jo'
+            'viet sb sb jo'
+            'viet sri sri jo'
+            'vb sri sri jo'
+            'marok mb mb mb'
+            'marok mb mb mb';
+    }
+    
+    /*Rejser*/
+    #container{
+        width: 85%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas: 
+            'rg rg rg rg dp inklu';
+    }
+    
+    #mereinfo{
+        width: 85%;
+    }
+    
+    /*footer*/
+    footer{
+        padding: 2%;
+    }
+    
+    footer p{
+        padding: 0;
+    }
+}
